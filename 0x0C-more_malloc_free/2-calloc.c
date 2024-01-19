@@ -5,21 +5,21 @@
 *@nmemb: number of elements
 *@size: size of the memory block to be allocated
 *
-*Return: poiner to the address of the memory block
+*Return: void
 */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char *block;
+	char *pntr;
 	unsigned int i;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
-	block = malloc(nmemb * size);
-	if (block != NULL)
+	pntr = malloc(nmemb * size);
+	if (pntr != NULL)
 	{
 		for (i = 0; i < (nmemb * size); i++)
-			block[i] = 0;
-		return (block);
+			pntr[i] = 0;
+		return (pntr);
 	}
 	else
 		return (NULL);
